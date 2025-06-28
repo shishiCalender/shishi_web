@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Card, CardContent } from "../../components/ui/card";
 
 export const ArtboardCopy = (): JSX.Element => {
+  const [showQrCode, setShowQrCode] = React.useState(false); // New state for QR code visibility
+
   // Navigation categories that appear at top and bottom
   const categories = [
     "Layouts",
@@ -80,17 +82,18 @@ export const ArtboardCopy = (): JSX.Element => {
   }, [layoutImages.length]); // Re-run if number of images changes (unlikely)
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-amber-900 via-orange-800 to-red-900 relative overflow-hidden">
+    <div className="min-h-screen w-full bg-gradient-to-br from-white via-pink-100 to-blue-100 relative overflow-hidden">
       {/* Film grain texture overlay */}
       <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml,%3Csvg viewBox=%220 0 256 256%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.9%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E')] pointer-events-none"></div>
       
+      {/* background setting */}
       {/* Warm cinematic gradient overlays */}
-      <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-amber-600/30 to-transparent"></div>
-      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-red-900/40 to-transparent"></div>
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-orange-700/20 to-transparent"></div>
+      <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-pink-100/30 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-blue-100/40 to-transparent"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-pink-100/20 to-transparent"></div>
       
       {/* Soft spotlight effect */}
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-gradient-radial from-yellow-200/10 via-transparent to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-gradient-radial from-blue-100/10 via-transparent to-transparent rounded-full blur-3xl"></div>
 
       <Card className="bg-transparent flex flex-row justify-center w-full min-h-screen border-none">
         <CardContent className="bg-transparent overflow-hidden w-full max-w-[1400px] h-screen p-0 relative">
@@ -186,9 +189,56 @@ export const ArtboardCopy = (): JSX.Element => {
           </div>
 
           {/* Figma logo placeholder */}
-          <div className="absolute bottom-[120px] left-1/2 transform -translate-x-1/2 w-12 h-12 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20 flex items-center justify-center z-30">
-            <div className="w-6 h-6 bg-gradient-to-br from-amber-400 to-orange-500 rounded"></div>
-          </div>
+          {/* Replaced with a Download Button */}
+          <button
+            className="absolute bottom-[120px] left-1/2 transform -translate-x-1/2 w-16 h-16 bg-white/10 rounded-full backdrop-blur-sm border border-white/20 flex items-center justify-center z-40 hover:bg-white/20 transition-colors duration-300 focus:outline-none"
+            onClick={() => setShowQrCode(true)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              />
+            </svg>
+          </button>
+
+          {/* QR Code Modal */}
+          {showQrCode && (
+            <div
+              className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+              onClick={() => setShowQrCode(false)} // Close when clicking outside
+            >
+              <div
+                className="bg-white p-8 rounded-lg shadow-lg relative"
+                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
+              >
+                <button
+                  className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl"
+                  onClick={() => setShowQrCode(false)}
+                >
+                  &times;
+                </button>
+                <h3 className="text-xl font-bold mb-4 text-center">Scan to Download</h3>
+                {/* Placeholder for QR Code image */}
+                <img
+                  src="/0f934c02385e3c2c468dacc81c3ed18.png" // IMPORTANT: Replace this path with your actual QR code image path
+                  alt="QR Code"
+                  className="w-64 h-64 mx-auto"
+                />
+                <p className="text-sm text-gray-600 text-center mt-4">
+                  (download shishi calender)
+                </p>
+              </div>
+            </div>
+          )}
         </CardContent>
       </Card>
     </div>
