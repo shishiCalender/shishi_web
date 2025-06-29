@@ -8,15 +8,15 @@ export const ArtboardCopy = (): JSX.Element => {
   const contentRef = useRef<HTMLDivElement>(null);
   
   const categories = [
-    "tender",
-    "tender",
-    "tender",
-    "tender",
-    "tender",
-    "tender",
-    "tender",
-    "tender",
-    "tender",
+    "Tender",
+    "Tender",
+    "Tender",
+    "Tender",
+    "Tender",
+    "Tender",
+    "Tender",
+    "Tender",
+    "Tender",
 
   ];
 
