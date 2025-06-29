@@ -8,14 +8,16 @@ export const ArtboardCopy = (): JSX.Element => {
   const contentRef = useRef<HTMLDivElement>(null);
   
   const categories = [
-    "Layouts",
-    "Fonts",
-    "Plugins",
-    "Editable",
-    "Graphics",
-    "Shapes",
-    "Gradients",
-    "Texture",
+    "tender",
+    "tender",
+    "tender",
+    "tender",
+    "tender",
+    "tender",
+    "tender",
+    "tender",
+    "tender",
+
   ];
 
   const layoutImages = [
@@ -41,42 +43,48 @@ export const ArtboardCopy = (): JSX.Element => {
       description: "探索精心设计的2024年日历，融合了传统元素与现代美学。每个月份都有独特的主题，从自然风光到城市建筑，从抽象艺术到传统文化符号。",
       imageBg: "bg-gradient-to-br from-yellow-200 to-green-200",
       buttonColor: "bg-green-500 hover:bg-green-600",
-      buttonText: "春日系列"
+      buttonText: "春日系列",
+      imageUrl: "/tender1.png"
     },
     {
       title: "Shishi Calendar 2024 - 夏韵",
       description: "这个日历不仅仅是时间的记录，更是一件艺术品。我们精心挑选了12位国际知名设计师，每人负责一个月的设计，确保每个月都有全新的视觉体验。",
       imageBg: "bg-gradient-to-br from-blue-200 to-purple-200",
       buttonColor: "bg-blue-500 hover:bg-blue-600",
-      buttonText: "夏韵系列"
+      buttonText: "夏韵系列",
+      imageUrl: "/tender2.png"
     },
     {
       title: "Shishi Calendar 2024 - 秋实",
       description: "采用环保纸张和植物墨水印刷，确保作品不仅美观而且环保。每个日历都附带一个精美的金属支架，方便您展示在桌面或书架上。",
       imageBg: "bg-gradient-to-br from-orange-200 to-red-200",
       buttonColor: "bg-orange-500 hover:bg-orange-600",
-      buttonText: "秋实系列"
+      buttonText: "秋实系列",
+      imageUrl: "/tender3.png"
     },
     {
       title: "Shishi Calendar 2024 - 冬雪",
       description: "探索精心设计的2024年日历，融合了传统元素与现代美学。每个月份都有独特的主题，从自然风光到城市建筑，从抽象艺术到传统文化符号。",
       imageBg: "bg-gradient-to-br from-blue-200 to-indigo-200",
       buttonColor: "bg-indigo-500 hover:bg-indigo-600",
-      buttonText: "冬雪系列"
+      buttonText: "冬雪系列",
+      imageUrl: "/tender4.png"
     },
     {
       title: "Shishi Calendar 2024 - 晨曦",
       description: "这个日历不仅仅是时间的记录，更是一件艺术品。我们精心挑选了12位国际知名设计师，每人负责一个月的设计，确保每个月都有全新的视觉体验。",
       imageBg: "bg-gradient-to-br from-pink-200 to-purple-300",
       buttonColor: "bg-pink-500 hover:bg-pink-600",
-      buttonText: "晨曦系列"
+      buttonText: "晨曦系列",
+      imageUrl: "/tender5.png"
     },
     {
       title: "Shishi Calendar 2024 - 月华",
       description: "采用环保纸张和植物墨水印刷，确保作品不仅美观而且环保。每个日历都附带一个精美的金属支架，方便您展示在桌面或书架上。",
       imageBg: "bg-gradient-to-br from-gray-200 to-blue-300",
       buttonColor: "bg-gray-500 hover:bg-gray-600",
-      buttonText: "月华系列"
+      buttonText: "月华系列",
+      imageUrl: "/tender6.png"
     }
   ];
 
@@ -142,8 +150,8 @@ export const ArtboardCopy = (): JSX.Element => {
   }, [layoutImages.length]);
 
   // 计算底部导航栏透明度（随滚动增加而减小）
-  const bottomNavOpacity = Math.max(0, 1 - scrollProgress * 2);
-  const upsideNavOpacity = Math.max(0, 1 - scrollProgress * 2);
+  const bottomNavOpacity = Math.max(0, 1 - scrollProgress * 5);
+  const upsideNavOpacity = Math.max(0, 1 - scrollProgress * 5);
   
   
   // 计算每页内容的透明度和位置
@@ -347,38 +355,20 @@ export const ArtboardCopy = (): JSX.Element => {
                       </div>
                       
                       <div className="flex flex-col items-center">
-                        <div className={`${page.imageBg} rounded-xl w-full h-64 flex items-center justify-center mb-4`}>
-                          <div className="bg-white p-4 rounded-lg shadow-lg">
-                            <div className="flex">
-                              {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day, i) => (
-                                <div key={i} className="w-8 text-center font-bold text-blue-600">{day}</div>
-                              ))}
-                            </div>
-                            <div className="grid grid-cols-7 gap-2 mt-2">
-                              {Array.from({length: 28}, (_, i) => i + 1).map(day => (
-                                <div key={day} className={`text-center rounded-full w-8 h-8 flex items-center justify-center ${day === 15 ? 'bg-blue-500 text-white' : day > 20 ? 'text-gray-300' : ''}`}>
-                                  {day}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
+                        <div className={`${page.imageBg} rounded-xl mb-4 max-w-full h-auto flex items-center justify-center`}>
+                          <img 
+                            src={page.imageUrl} 
+                            alt={page.title} 
+                            className="rounded-xl max-w-full h-auto"
+                            onError={(e) => {
+                              console.error(`Failed to load image: ${page.imageUrl}`);
+                              e.currentTarget.style.display = 'none';
+                            }}
+                          />
                         </div>
                         <button className={`${page.buttonColor} text-white font-semibold py-2 px-6 rounded-full transition-colors shadow-md hover:shadow-lg`}>
                           {page.buttonText}
                         </button>
-                      </div>
-                    </div>
-                    
-                    <div className="mt-12">
-                      <h3 className="text-xl font-bold mb-4">设计师团队</h3>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        {[1, 2, 3, 4, 5, 6].map((i) => (
-                          <div key={`designer-${index}-${i}`} className="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
-                            <div className="w-24 h-24 rounded-full overflow-hidden mb-3 bg-gradient-to-br from-pink-300 to-purple-500"></div>
-                            <p className="font-medium text-lg">设计师 {i}</p>
-                            <p className="text-sm text-gray-600">设计领域</p>
-                          </div>
-                        ))}
                       </div>
                     </div>
                   </div>
@@ -430,3 +420,10 @@ export const ArtboardCopy = (): JSX.Element => {
     </div>
   );
 };
+
+
+
+
+
+
+
