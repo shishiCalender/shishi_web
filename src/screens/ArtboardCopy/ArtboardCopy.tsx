@@ -44,7 +44,7 @@ export const ArtboardCopy = (): JSX.Element => {
       imageBg: "bg-gradient-to-br from-yellow-200 to-green-200",
       buttonColor: "bg-green-500 hover:bg-green-600",
       buttonText: "春日系列",
-      imageUrl: "/tender1.png"
+      imageUrl: "https://images-1332515911.cos.ap-guangzhou.myqcloud.com/092bfa4b6c3e7b77464c6d75fa508c4.png"
     },
     {
       title: "Shishi Calendar 2024 - 夏韵",
