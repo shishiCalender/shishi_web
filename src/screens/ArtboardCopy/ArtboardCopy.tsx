@@ -21,7 +21,7 @@ export const ArtboardCopy = (): JSX.Element => {
   ];
 
   const layoutImages = [
-    { src: "/092bfa4b6c3e7b77464c6d75fa508c4.png", alt: "Layout 1" },
+    { src: "https://images-1332515911.cos.ap-guangzhou.myqcloud.com/092bfa4b6c3e7b77464c6d75fa508c4.png", alt: "Layout 1" },
     { src: "/ca68f05618405661cc74d2e698b3a7e.png", alt: "Layout 2" },
     { src: "/e5fbdb60c1c11cd48ecc14feb316486.png", alt: "Layout 3" },
     { src: "/19d2e4c7018f3ff2d7a8d52f70707f5.png", alt: "Layout 4" },
