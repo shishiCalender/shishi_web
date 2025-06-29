@@ -20,33 +20,13 @@ export const ArtboardCopy = (): JSX.Element => {
 
   ];
 
-  const baseImageUrl = "https://images-1332515911.cos.ap-guangzhou.myqcloud.com";
-
   const layoutImages = [
-    { 
-      src: `${baseImageUrl}/ca68f05618405661cc74d2e698b3a7e.png`, 
-      alt: "Layout 1" 
-    },
-    { 
-      src: `${baseImageUrl}/ca68f05618405661cc74d2e698b3a7e.png`, 
-      alt: "Layout 2" 
-    },
-    { 
-      src: `${baseImageUrl}/e5fbdb60c1c11cd48ecc14feb316486.png`, 
-      alt: "Layout 3" 
-    },
-    { 
-      src: `${baseImageUrl}/19d2e4c7018f3ff2d7a8d52f70707f5.png`, 
-      alt: "Layout 4" 
-    },
-    { 
-      src: `${baseImageUrl}/78564406f452c65c7c34076632636c3.png`, 
-      alt: "Layout 5" 
-    },
-    { 
-      src: `${baseImageUrl}/70d7cd04122b44c785f7d0852078467.png`, 
-      alt: "Layout 6" 
-    },
+    { src: "/092bfa4b6c3e7b77464c6d75fa508c4.png", alt: "Layout 1" },
+    { src: "/ca68f05618405661cc74d2e698b3a7e.png", alt: "Layout 2" },
+    { src: "/e5fbdb60c1c11cd48ecc14feb316486.png", alt: "Layout 3" },
+    { src: "/19d2e4c7018f3ff2d7a8d52f70707f5.png", alt: "Layout 4" },
+    { src: "/78564406f452c65c7c34076632636c3.png", alt: "Layout 5" },
+    { src: "/70d7cd04122b44c785f7d0852078467.png", alt: "Layout 6" },
   ];
 
   const duplicatedLayoutImages = [
