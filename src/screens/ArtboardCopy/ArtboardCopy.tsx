@@ -39,44 +39,44 @@ export const ArtboardCopy = (): JSX.Element => {
   // 定义6页内容
   const pagesContent = [
     {
-      title: "Shishi Calendar 2024 - 春日",
-      description: "探索精心设计的2024年日历，融合了传统元素与现代美学。每个月份都有独特的主题，从自然风光到城市建筑，从抽象艺术到传统文化符号。",
+      title: "Shishi Calendar 2025 - 春日",
+      description: "一款结合原创插画盲盒玩法的智能电子日历与APP，带来每天都有惊喜可收集、可交换的个性化生活体验。结合每日原创设计师图片推送的手机APP/桌面组件与实体电子日历硬件，通过图片集换和盲盒卡牌兑换，为用户提供融合数字美学与实体收藏乐趣的创新体验。",
       imageBg: "bg-gradient-to-br from-yellow-200 to-green-200",
       buttonColor: "bg-green-500 hover:bg-green-600",
-      buttonText: "春日系列",
-      imageUrl: "https://images-1332515911.cos.ap-guangzhou.myqcloud.com/092bfa4b6c3e7b77464c6d75fa508c4.png"
+      buttonText: "Tender 一下",
+      imageUrl: "/tender1.png"
     },
     {
-      title: "Shishi Calendar 2024 - 夏韵",
-      description: "这个日历不仅仅是时间的记录，更是一件艺术品。我们精心挑选了12位国际知名设计师，每人负责一个月的设计，确保每个月都有全新的视觉体验。",
+      title: "Shishi Calendar 2025 - 夏韵",
+      description: "Tender 日常是一款每天推送插画与一句话心情的情绪日历。来自不同设计师的温柔表达，为你留住那些看似普通、却值得纪念的日子。有些日子没什么特别，但我还是想留下。面向习惯悄悄记录生活、愿意细看日常的年轻人，Tender 日常每天送上一张插画和一句心情，为你留住那些别人看不见、但你觉得值得的小时刻，小瞬间。",
       imageBg: "bg-gradient-to-br from-blue-200 to-purple-200",
       buttonColor: "bg-blue-500 hover:bg-blue-600",
       buttonText: "夏韵系列",
-      imageUrl: "/tender2.png"
+      imageUrl: "/tender5.png"
     },
     {
-      title: "Shishi Calendar 2024 - 秋实",
-      description: "采用环保纸张和植物墨水印刷，确保作品不仅美观而且环保。每个日历都附带一个精美的金属支架，方便您展示在桌面或书架上。",
+      title: "Shishi Calendar 2025 - 秋实",
+      description: "每天一页，真诚插图 × 自我表达\n不是素材拼贴，而是来自不同风格创作者的真诚表达；\n不是喧哗的大主题，而是日常情绪的一句私语。\n收藏日子，不是打卡，是感应\n每张插画都可加入你的“情绪收藏册”，\n不是为了达成什么，而是把“被触动的那一刻”留住。",
       imageBg: "bg-gradient-to-br from-orange-200 to-red-200",
       buttonColor: "bg-orange-500 hover:bg-orange-600",
       buttonText: "秋实系列",
-      imageUrl: "/tender3.png"
-    },
-    {
-      title: "Shishi Calendar 2024 - 冬雪",
-      description: "探索精心设计的2024年日历，融合了传统元素与现代美学。每个月份都有独特的主题，从自然风光到城市建筑，从抽象艺术到传统文化符号。",
-      imageBg: "bg-gradient-to-br from-blue-200 to-indigo-200",
-      buttonColor: "bg-indigo-500 hover:bg-indigo-600",
-      buttonText: "冬雪系列",
       imageUrl: "/tender4.png"
     },
     {
-      title: "Shishi Calendar 2024 - 晨曦",
-      description: "这个日历不仅仅是时间的记录，更是一件艺术品。我们精心挑选了12位国际知名设计师，每人负责一个月的设计，确保每个月都有全新的视觉体验。",
+      title: "Shishi Calendar 2025 - 冬雪",
+      description: "11",
+      imageBg: "bg-gradient-to-br from-blue-200 to-indigo-200",
+      buttonColor: "bg-indigo-500 hover:bg-indigo-600",
+      buttonText: "冬雪系列",
+      imageUrl: "/tender3.png"
+    },
+    {
+      title: "Shishi Calendar 2025 - 晨曦",
+      description: "这个日历不仅仅是时间的记录，更是一件艺术品。",
       imageBg: "bg-gradient-to-br from-pink-200 to-purple-300",
       buttonColor: "bg-pink-500 hover:bg-pink-600",
       buttonText: "晨曦系列",
-      imageUrl: "/tender5.png"
+      imageUrl: "/tender2.png"
     },
     {
       title: "Shishi Calendar 2024 - 月华",
