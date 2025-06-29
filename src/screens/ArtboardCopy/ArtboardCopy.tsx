@@ -24,7 +24,7 @@ export const ArtboardCopy = (): JSX.Element => {
 
   const layoutImages = [
     { 
-      src: `![1](${baseImageUrl}/b0f1c8d2e3a4c5b6d7e8f9a0b1c2d3e.png)`, 
+      src: `${baseImageUrl}/ca68f05618405661cc74d2e698b3a7e.png`, 
       alt: "Layout 1" 
     },
     { 
