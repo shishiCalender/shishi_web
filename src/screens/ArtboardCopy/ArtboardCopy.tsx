@@ -40,7 +40,7 @@ export const ArtboardCopy = (): JSX.Element => {
   const pagesContent = [
     {
       title: "Shishi Calendar 2025 - 春日",
-      description: "一款结合原创插画盲盒玩法的智能电子日历与APP，带来每天都有惊喜可收集、可交换的个性化生活体验。结合每日原创设计师图片推送的手机APP/桌面组件与实体电子日历硬件，通过图片集换和盲盒卡牌兑换，为用户提供融合数字美学与实体收藏乐趣的创新体验。",
+      description: "Tender 日常是一款每天推送插画与一句话心情的情绪日历。来自不同设计师的温柔表达，为你留住那些看似普通、却值得纪念的日子。有些日子没什么特别，但我还是想留下。面向习惯悄悄记录生活、愿意细看日常的年轻人，Tender 日常每天送上一张插画和一句心情，为你留住那些别人看不见、但你觉得值得的小时刻，小瞬间。",
       imageBg: "bg-gradient-to-br from-yellow-200 to-green-200",
       buttonColor: "bg-green-500 hover:bg-green-600",
       buttonText: "Tender 一下",
@@ -48,7 +48,7 @@ export const ArtboardCopy = (): JSX.Element => {
     },
     {
       title: "Shishi Calendar 2025 - 夏韵",
-      description: "Tender 日常是一款每天推送插画与一句话心情的情绪日历。来自不同设计师的温柔表达，为你留住那些看似普通、却值得纪念的日子。有些日子没什么特别，但我还是想留下。面向习惯悄悄记录生活、愿意细看日常的年轻人，Tender 日常每天送上一张插画和一句心情，为你留住那些别人看不见、但你觉得值得的小时刻，小瞬间。",
+      description: "一款结合原创插画盲盒玩法的智能电子日历与APP，带来每天都有惊喜可收集、可交换的个性化生活体验。结合每日原创设计师图片推送的手机APP/桌面组件与实体电子日历硬件，通过图片集换和盲盒卡牌兑换，为用户提供融合数字美学与实体收藏乐趣的创新体验。",
       imageBg: "bg-gradient-to-br from-blue-200 to-purple-200",
       buttonColor: "bg-blue-500 hover:bg-blue-600",
       buttonText: "夏韵系列",
@@ -56,7 +56,7 @@ export const ArtboardCopy = (): JSX.Element => {
     },
     {
       title: "Shishi Calendar 2025 - 秋实",
-      description: "每天一页，真诚插图 × 自我表达\n不是素材拼贴，而是来自不同风格创作者的真诚表达；\n不是喧哗的大主题，而是日常情绪的一句私语。\n收藏日子，不是打卡，是感应\n每张插画都可加入你的“情绪收藏册”，\n不是为了达成什么，而是把“被触动的那一刻”留住。",
+      description: "每天一页，真诚插图 × 自我表达\n不是素材拼贴，而是来自不同风格创作者的真诚表达；\n不是喧哗的大主题，而是日常情绪的一句私语。\n收藏日子，不是打卡，是感应\n每张插画都可加入你的\"情绪收藏册\"，\n不是为了达成什么，而是把\"被触动的那一刻\"留住。",
       imageBg: "bg-gradient-to-br from-orange-200 to-red-200",
       buttonColor: "bg-orange-500 hover:bg-orange-600",
       buttonText: "秋实系列",
@@ -64,7 +64,7 @@ export const ArtboardCopy = (): JSX.Element => {
     },
     {
       title: "Shishi Calendar 2025 - 冬雪",
-      description: "11",
+      description: "没有push、没有焦虑式打卡提醒，Tender 日常是一个来得轻、留得深的朋友型App。.共创型内容，风格多元但气质一致来自各个地区的独立插画师、艺术家、设计师共同参与；我们欢迎多元表达，但坚持真挚表达。“可以慢慢长出来的“心情宇宙”。你看到的是一张插画，背后是一个创作者；你收藏的是一句话，也许就是你生活里曾想说却没说出的事。Tender 日常是一次“人与情绪”的慢链接实验",
       imageBg: "bg-gradient-to-br from-blue-200 to-indigo-200",
       buttonColor: "bg-indigo-500 hover:bg-indigo-600",
       buttonText: "冬雪系列",
@@ -335,21 +335,21 @@ export const ArtboardCopy = (): JSX.Element => {
                   }}
                 >
                   <div className="max-w-4xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-6">{page.title}</h2>
+                    <h2 className="text-3xl font-bold mb-6 pt-8">{page.title}</h2>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                      <div>
+                      <div className="px-4 pt-8">
                         <p className="text-lg mb-4">
                           {page.description}
                         </p>
                         <p className="text-lg mb-4">
                           {index % 2 === 0 
-                            ? "这个日历不仅仅是时间的记录，更是一件艺术品。我们精心挑选了12位国际知名设计师，每人负责一个月的设计，确保每个月都有全新的视觉体验。" 
-                            : "每个日历都配有设计师独家签名，并提供收藏证书。独特的设计风格配合高质量印刷工艺，带来绝佳的视觉享受。"}
+                            ? "这个日历不仅仅是时间的记录，更是一件艺术品。由设计师打造图案，每天都有全新的视觉体验。" 
+                            : "每个日历都提供收藏证书。独特的设计风格配合高质量印刷工艺，带来绝佳的视觉享受。"}
                         </p>
                         <p className="text-lg mb-4">
                           {index % 3 === 0 
-                            ? "采用环保纸张和植物墨水印刷，确保作品不仅美观而且环保。每个日历都附带一个精美的金属支架，方便您展示在桌面或书架上。" 
+                            ? "后续将发布纸质日历等文创品" 
                             : "限量发售版本附带特别设计的包装盒和设计师寄语卡片，是收藏或赠礼的完美选择。"}
                         </p>
                       </div>
